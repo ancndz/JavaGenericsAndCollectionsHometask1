@@ -1,6 +1,5 @@
 package ru.ancndz.javaSchool;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -20,7 +19,11 @@ public class Counter {
         Pattern punctuations = Pattern.compile("[\\s,.!?]+");
         String[] clearText = punctuations.split(this.text);
         Map<String, Integer> result = new HashMap<>();
-        Arrays.stream(clearText).forEach(word -> result.put(word, result.getOrDefault(word, 0) + 1));
+
+        for (String word: clearText) {
+            result.put(word, result.getOrDefault(word, 0) + 1);
+        }
+
         return result;
     }
 }
