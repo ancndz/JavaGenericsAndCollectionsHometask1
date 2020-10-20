@@ -1,4 +1,4 @@
-package ru.ancndz.javaSchool;
+package ru.ancndz.javaSchool.firstTask;
 
 import java.util.HashMap;
 import java.util.Map;
